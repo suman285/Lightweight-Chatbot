@@ -1,0 +1,187 @@
+/* style.css */
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* File Upload Section */
+#file-upload {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+#file-upload input {
+    margin-left: 10px;
+}
+
+/* Chatbot Toggle Button */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, #0078d4, #005bb5);
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#chatbot-toggle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #005bb5, #003f8a);
+}
+
+/* Chatbot Popup */
+#chatbot-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Animation for Popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#chat-header {
+    background: linear-gradient(to right, #0078d4, #005bb5);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#chat-history {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f4f7fc;
+    border-top: 1px solid #ddd;
+    scroll-behavior: smooth;
+}
+
+#chat-history div {
+    margin-bottom: 10px;
+}
+
+#chat-history strong {
+    color: #0078d4;
+}
+
+/* Chat Input */
+#chat-input {
+    display: flex;
+    padding: 15px;
+    background: #f4f4f4;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#user-input:focus {
+    border-color: #0078d4;
+    box-shadow: 0 0 8px rgba(0, 120, 212, 0.3);
+}
+
+#send-btn {
+    background: linear-gradient(to right, #0078d4, #005bb5);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#send-btn:hover {
+    background: linear-gradient(to right, #005bb5, #003f8a);
+}
+
+
+/* Chat History */
+#chat-history {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    background: #f4f7fc;
+    border-top: 1px solid #ddd;
+    max-height: 300px; /* Set a maximum height for the chat history */
+    scroll-behavior: smooth; /* Smooth scrolling when content updates */
+}
+
+/* Optional: Customize Scrollbar for Better Appearance */
+#chat-history::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#chat-history::-webkit-scrollbar-thumb {
+    background: #0078d4; /* Color of the scrollbar handle */
+    border-radius: 10px;
+}
+
+#chat-history::-webkit-scrollbar-thumb:hover {
+    background: #005bb5; /* Darker shade when hovered */
+}
+
+#chat-history::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
